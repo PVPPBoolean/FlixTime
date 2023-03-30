@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.firstpage {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstpage__container {
+  flex-basis: 55%;
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-end; */
+  height: 100%;
+  width: 100%;
+}
+
+.test {
+  background-color: #5baab0;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0px 300px 300px 0px;
+}
+
+.firstpage__bgimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 45%;
+
+  /* background-color: #ffffff; */
+  /* background-image: url(./img/Pik.png); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  height: 100%px;
+  width: 100%;
+}
+
+.firstpage__title h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+  line-height: 80px;
+  color: #ffffff;
+}
+
+.firstpage__title h3 {
+  font-family: "Magra";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 1rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.firstpage__body {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  display: flex;
+  gap: 10px;
+}
+
+.firstpage__body p {
+  font-family: "Strong";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 19px;
+  color: #000000;
+}
+.firstpage__body input {
+  font-family: "Numans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 14px;
+  padding: 2px 10px;
+  border-radius: 6px;
+  text-align: center;
+  /* background: transparent; */
+  border: none;
+  color: #000000;
+}
+
+.firstpage__body input::placeholder {
+  font-size: 1.2rem;
+}
+
+.form-footer button {
+  background: #000000;
+  border-radius: 3px;
+  font-family: "Strong";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  padding: 5px 30px;
+}
+
+.form-footer button:disabled {
+  display: none;
+}
+
+.form-footer button:hover {
+  background: rgb(28, 33, 39);
+}
+
+@media only screen and (max-width: 700px) {
+  .firstpage {
+    flex-direction: column;
+  }
+  .test {
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .firstpage__bgimage {
+    /* display: none; */
+    padding: 20px;
+  }
+  .firstpage__bgimage img {
+    height: 100%;
+    width: 70%;
+  }
+}
