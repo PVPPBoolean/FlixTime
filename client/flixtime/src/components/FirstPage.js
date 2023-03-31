@@ -1,6 +1,6 @@
 import React from "react";
 
-function FirstPage({ groupSize, setGroupSize, maxGroupSize }) {
+function FirstPage({ groupSize, setGroupSize, maxGroupSize, page, setPage }) {
   return (
     <div className="firstpage">
       <div className="firstpage__container">
@@ -22,6 +22,15 @@ function FirstPage({ groupSize, setGroupSize, maxGroupSize }) {
                   setGroupSize(e.target.value);
                 }}
               ></input>
+            </div>
+            <div className="form-footer">
+              <button
+                onClick={() => {
+                  setPage((currPage) => currPage + 1);
+                }}
+              >
+                Next
+              </button>
             </div>
           </div>
         </div>

@@ -48,6 +48,8 @@ function Form({ movieTitleList }) {
           groupSize={groupSize}
           setGroupSize={setGroupSize}
           maxGroupSize={maxGroupSize}
+          page={page}
+          setPage={setPage}
         />
       );
     } else if (page === FormTitles.length - 1) {
@@ -100,7 +102,7 @@ function Form({ movieTitleList }) {
             Prev
           </button>
           <button
-            disabled={page === FormTitles.length - 1}
+            disabled={page === FormTitles.length - 1 || page === 0}
             onClick={() => {
               setPage((currPage) => currPage + 1);
             }}
