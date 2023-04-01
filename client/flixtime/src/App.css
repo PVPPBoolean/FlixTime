@@ -28,6 +28,9 @@
   align-items: center;
   flex-direction: column;
   border-radius: 0px 300px 300px 0px;
+  border-right: 3px solid #000000;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .firstpage__bgimage {
@@ -63,7 +66,6 @@
   display: flex;
   align-items: center;
   margin-top: 50px;
-  display: flex;
   gap: 10px;
 }
 
@@ -116,11 +118,202 @@
   background: rgb(28, 33, 39);
 }
 
+.ratings__cointainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ratings__left {
+  flex-basis: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  /* border-right: 2px #000000 solid; */
+}
+
+.ratings__left h1 {
+  font-family: "Limelight";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.5rem;
+  line-height: 39px;
+  color: #151414;
+  padding: 10px;
+  text-align: center;
+}
+
+.rates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  flex-direction: column;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 30px;
+  width: 60%;
+}
+
+.rate__cointainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.rate__cointainer p {
+  font-family: "Ledger";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 18px;
+  color: #000000;
+}
+
+.rate__cointainer input {
+  font-family: "Numans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 14px;
+  padding: 2px 30px;
+  border-radius: 3px;
+  text-align: center;
+  background: #bfcddd;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+.ratings__left .form-footer {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ratings__right {
+  background-color: #5baab0;
+  flex-basis: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratings__right .card__cointainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 85%;
+  height: 85%;
+  background-color: #bfcddd;
+  border-radius: 12px;
+  border: #000000 2px solid;
+  /* padding: 20px; */
+}
+
+.ratings__right .card__cointainer .card__poster {
+  flex-basis: 55%;
+  height: 100px;
+}
+
+.ratings__right .card__cointainer .card__poster img {
+  height: 100%;
+  border: #000000 2px solid;
+  border-radius: 10px;
+}
+
+.ratings__right .card__cointainer .card__details {
+  /* flex-basis: 45%; */
+  /* height: 100%; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ratings__right .card__cointainer .card__details .card__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 95%; */
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ratings__right .card__cointainer .card__details .card__title h1 {
+  font-family: "Magra";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 49px;
+  color: #1a1818;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.ratings__right .card__cointainer .card__details .card__title h5 {
+  font-family: "Mako";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 26px;
+  -webkit-text-stroke: #000000 1px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  /* border: 1px solid #000000; */
+}
+
+.ratings__right .card__cointainer .card__details .card__subinfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.ratings__right .card__cointainer .card__details .card__subinfo h5 {
+  font-family: "Mako";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.ratings__right .card__cointainer .card__details .card__body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.ratings__right .card__cointainer .card__details .card__body h5 {
+  font-family: "Meera Inimai", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 23px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
 @media only screen and (max-width: 700px) {
   .firstpage {
     flex-direction: column;
   }
   .test {
+    border: 0px;
     border-radius: 0px 0px 0px 0px;
   }
 

@@ -46,17 +46,33 @@ function Card({ movieName }) {
       return <div>{/* <h1>Movie not found</h1> */}</div>;
     } else {
       return (
-        <div>
-          {/* <img src={movieDetail.Poster} alt="movie poster" /> */}
-          <h1>{movieDetail.Title}</h1>
-          <h5>{movieDetail.Released}</h5>
-          <h5>{movieDetail.imdbRating}</h5>
-          <a
+        <div className="card__cointainer">
+          <div className="card__poster">
+            <img src={movieDetail.Poster} alt="movie poster" />
+          </div>
+          <div className="card__details">
+            <div className="card__title">
+              <h1>{movieDetail.Title}</h1>
+              <h5>{movieDetail.Year}</h5>
+            </div>
+            <div className="card__subinfo">
+              <h5>{movieDetail.imdbRating}/10</h5>
+              <h5>{movieDetail.Runtime}</h5>
+            </div>
+            <div className="card__body">
+              <h5 className="card__genre">Genre: {movieDetail.Genre}</h5>
+              <h5 className="card__director">
+                Directed by: {movieDetail.Director}
+              </h5>
+              <h5 className="card__actors">Starring: {movieDetail.Actors}</h5>
+            </div>
+          </div>
+          {/* <a
             href={`https://www.imdb.com/title/${movieDetail.imdbID}/`}
             target={"_blank"}
           >
             imdb
-          </a>
+          </a> */}
         </div>
       );
     }

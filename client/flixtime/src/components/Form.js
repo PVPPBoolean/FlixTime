@@ -63,18 +63,15 @@ function Form({ movieTitleList }) {
       );
     } else
       return (
-        <>
-          <div>
-            <h3>Rate the movie</h3>
-          </div>
-          <Rating
-            movieName={FormTitles.slice(1, -1)}
-            groupSize={groupSize}
-            page={page}
-            movieRating={movieRating}
-            setMovieRating={setMovieRating}
-          />
-        </>
+        <Rating
+          movieName={FormTitles.slice(1, -1)}
+          groupSize={groupSize}
+          page={page}
+          setPage={setPage}
+          movieRating={movieRating}
+          setMovieRating={setMovieRating}
+          FormTitles={FormTitles}
+        />
       );
   };
 
@@ -84,32 +81,6 @@ function Form({ movieTitleList }) {
       <div className="form-cointainer" style={{ position: "relative" }}>
         <div className="form-header">{/* <h1>{FormTitles[page]}</h1> */}</div>
         <div className="form-body">{PageDisplay()}</div>
-        <div
-          className="form-footer"
-          // style={{
-          //   position: " absolute",
-          //   top: "450px",
-          //   left: "30px",
-          //   zindex: "1",
-          // }}
-        >
-          <button
-            disabled={page === 0}
-            onClick={() => {
-              setPage((currPage) => currPage - 1);
-            }}
-          >
-            Prev
-          </button>
-          <button
-            disabled={page === FormTitles.length - 1 || page === 0}
-            onClick={() => {
-              setPage((currPage) => currPage + 1);
-            }}
-          >
-            Next
-          </button>
-        </div>
       </div>
     </div>
   );
