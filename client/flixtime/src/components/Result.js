@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Card from "./Card";
 
-function Result({ movieRating, groupSize, page, movieName }) {
+function Result({ movieRating, groupSize, page, setPage, movieName }) {
   let [resultMovies, setResultMovies] = useState({});
 
   useEffect(() => {
@@ -39,6 +39,22 @@ function Result({ movieRating, groupSize, page, movieName }) {
           </li>
         ))}
       </ul>
+      <div className="form-footer">
+        <button
+          onClick={() => {
+            setPage((currPage) => currPage - 1);
+          }}
+        >
+          Prev
+        </button>
+        <button
+          onClick={() => {
+            setPage(0);
+          }}
+        >
+          Home
+        </button>
+      </div>
     </div>
   );
 }

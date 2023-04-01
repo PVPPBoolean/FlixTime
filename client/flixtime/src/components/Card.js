@@ -48,7 +48,12 @@ function Card({ movieName }) {
       return (
         <div className="card__cointainer">
           <div className="card__poster">
-            <img src={movieDetail.Poster} alt="movie poster" />
+            <a
+              href={`https://www.imdb.com/title/${movieDetail.imdbID}/`}
+              target={"_blank"}
+            >
+              <img src={movieDetail.Poster} alt="movie poster" />
+            </a>
           </div>
           <div className="card__details">
             <div className="card__title">

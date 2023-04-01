@@ -58,6 +58,7 @@ function Form({ movieTitleList }) {
           movieRating={movieRating}
           groupSize={groupSize}
           page={page}
+          setPage={setPage}
           movieName={FormTitles.slice(1, -1)}
         />
       );

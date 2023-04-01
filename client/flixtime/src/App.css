@@ -108,6 +108,7 @@
   line-height: 14px;
   color: #ffffff;
   padding: 5px 30px;
+  cursor: pointer;
 }
 
 .form-footer button:disabled {
@@ -256,7 +257,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 2.5rem;
-  line-height: 49px;
+  line-height: 35px;
   color: #1a1818;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
@@ -269,10 +270,7 @@
   font-size: 2rem;
   line-height: 26px;
   -webkit-text-stroke: #000000 1px;
-
   color: rgba(255, 255, 255, 0.8);
-
-  /* border: 1px solid #000000; */
 }
 
 .ratings__right .card__cointainer .card__details .card__subinfo {
