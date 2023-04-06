@@ -322,4 +322,54 @@
     height: 100%;
     width: 70%;
   }
+
+  .ratings__cointainer {
+    flex-direction: column;
+    height: 100%;
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .ratings__left {
+    flex-basis: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .ratings__left h1 {
+    line-height: 57px;
+  }
+
+  .rate__cointainer p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .rate__cointainer input {
+    font-size: 0.8rem;
+    padding: 2px 20px;
+  }
+
+  .ratings__right {
+    flex-basis: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .ratings__right .card__cointainer {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .ratings__right .card__cointainer .card__poster {
+    flex-basis: 55%;
+    height: 100px;
+  }
+
+  .ratings__right .card__cointainer .card__poster img {
+    height: 100%;
+  }
 }
