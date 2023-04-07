@@ -29,14 +29,28 @@ function FirstPage({ groupSize, setGroupSize, maxGroupSize, page, setPage }) {
                   setPage((currPage) => currPage + 1);
                 }}
               >
-                Next
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "14px",
+                  }}
+                >
+                  Next
+                  <box-icon
+                    name="chevron-right-circle"
+                    type="solid"
+                    color="#bfcddd"
+                  ></box-icon>
+                </div>
               </button>
             </div>
           </div>
         </div>
       </div>
       <div className="firstpage__bgimage">
-        <img src="/img/Pik.png" alt="tatti" />
+        <img src="/img/Pik.png" alt="bgimg" />
       </div>
     </div>
   );

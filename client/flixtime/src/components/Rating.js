@@ -4,7 +4,7 @@ import Card from "./Card";
 function Rate({ k, page, movieRating, setMovieRating }) {
   return (
     <div className="rate__cointainer">
-      <p>USER {k + 1} :</p>
+      <p>User {k + 1} :</p>
       <input
         type="number"
         min="1"
@@ -55,14 +55,42 @@ function Rating({
               setPage((currPage) => currPage - 1);
             }}
           >
-            Prev
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "8px",
+              }}
+            >
+              <box-icon
+                name="chevron-left"
+                type="solid"
+                color="#5baab0"
+              ></box-icon>
+              Prev
+            </div>
           </button>
           <button
             onClick={() => {
               setPage((currPage) => currPage + 1);
             }}
           >
-            Next
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "8px",
+              }}
+            >
+              Next
+              <box-icon
+                name="chevron-right"
+                type="solid"
+                color="#5baab0"
+              ></box-icon>
+            </div>
           </button>
         </div>
       </div>

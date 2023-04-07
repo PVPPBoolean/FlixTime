@@ -61,15 +61,42 @@ function Card({ movieName }) {
               <h5>{movieDetail.Year}</h5>
             </div>
             <div className="card__subinfo">
-              <h5>{movieDetail.imdbRating}/10</h5>
-              <h5>{movieDetail.Runtime}</h5>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "2px",
+                }}
+              >
+                <box-icon name="star"></box-icon>
+                <h5>{movieDetail.imdbRating}/10</h5>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "2px",
+                }}
+              >
+                <box-icon name="time-five"></box-icon>
+                <h5>{movieDetail.Runtime}</h5>
+              </div>
             </div>
             <div className="card__body">
-              <h5 className="card__genre">Genre: {movieDetail.Genre}</h5>
-              <h5 className="card__director">
-                Directed by: {movieDetail.Director}
+              <h5 className="card__genre">
+                <b>Genre: </b>
+                {movieDetail.Genre}
               </h5>
-              <h5 className="card__actors">Starring: {movieDetail.Actors}</h5>
+              <h5 className="card__director">
+                <b>Directed By: </b>
+                {movieDetail.Director}
+              </h5>
+              <h5 className="card__actors">
+                <b>Starring: </b>
+                {movieDetail.Actors}
+              </h5>
             </div>
           </div>
           {/* <a
