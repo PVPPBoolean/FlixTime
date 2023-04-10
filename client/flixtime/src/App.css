@@ -398,5 +398,109 @@ li {
 
   .ratings__right .card__cointainer .card__poster img {
     height: 100%;
+    width: 100%;
+    max-width: 400px;
   }
+}
+
+/* Result Page recommendations Card */
+
+/* .recc > ul {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    hsla(184, 35%, 52%, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    hsl(184, 35%, 52%) 100%
+  );
+  isolation: isolate;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+} */
+
+.recc > ul {
+  isolation: isolate;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* height: 400rem; */
+  /* width: 100vw; */
+  background: linear-gradient(
+    180deg,
+    hsla(184, 35%, 52%, 100%),
+    #ffffff,
+    #bfcddd,
+    #bfcddd,
+    hsla(184, 35%, 52%, 100%),
+    #ffffff
+  );
+  background-size: 100% 500%;
+  animation: colorscroll 5s linear infinite;
+}
+
+@keyframes colorscroll {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
+
+.recc .card__cointainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  width: max-content;
+  max-width: 50rem;
+  /* box-shadow: 1rem 1rem 0.5rem hsla(0, 0%, 0%, 0.5); */
+  /* gradient border */
+  border: 5px solid Black;
+  /* border-image: linear-gradient(
+      to right,
+      hsl(184, 35%, 52%),
+      rgba(195, 20, 20, 0.5) 50%,
+      rgba(142, 50, 172, 0.5) 50%,
+      rgba(255, 255, 255, 0.5)
+    )
+    1; */
+  border-radius: 10px;
+  z-index: 3;
+}
+
+.recc .card__cointainer:hover .card__poster {
+  transition: all 1s ease-in-out;
+}
+
+.recc .card__cointainer {
+  position: relative;
+}
+
+.recc .card__cointainer .card__details {
+  position: absolute;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  scale: 0;
+  margin: 0.5rem;
+}
+
+.recc .card__cointainer:hover .card__details {
+  opacity: 1;
+  scale: 1;
+}
+
+.recc .card__cointainer:hover .card__cointainer {
+  opacity: 0.5;
+}
+
+.recc .card__cointainer:hover .card__poster {
+  filter: blur(2px);
+  opacity: 0.2;
+  z-index: 2;
 }

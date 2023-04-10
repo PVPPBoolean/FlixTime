@@ -51,6 +51,7 @@ function Card({ movieName }) {
             <a
               href={`https://www.imdb.com/title/${movieDetail.imdbID}/`}
               target={"_blank"}
+              rel="noreferrer"
             >
               <img src={movieDetail.Poster} alt="movie poster" />
             </a>

@@ -23,22 +23,25 @@ function Result({ movieRating, groupSize, page, setPage, movieName }) {
       .finally(() => {
         console.log("Request completed");
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movieRating, groupSize]);
 
   return (
     <div>
-      <h3>FlixTime recommendes you to watch:</h3>
-      <ul>
-        {Object.entries(resultMovies).map((resMov) => (
-          <li>
-            <ul key={resMov}>
-              {resMov.map((item, index) => (
-                <Card movieName={item} key={index} />
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      {/* <h3>FlixTime recommendes you to watch:</h3> */}
+      <div className="recc">
+        <ul>
+          {Object.entries(resultMovies).map((resMov) => (
+            <li>
+              <ul key={resMov}>
+                {resMov.map((item, index) => (
+                  <Card movieName={item} key={index} />
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className="form-footer">
         <button
           onClick={() => {
