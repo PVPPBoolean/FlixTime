@@ -27,8 +27,52 @@ function Result({ movieRating, groupSize, page, setPage, movieName }) {
   }, [movieRating, groupSize]);
 
   return (
-    <div>
-      {/* <h3>FlixTime recommendes you to watch:</h3> */}
+    <>
+      <div className="footer-container">
+        <h1>FlixTime recommendes you to watch:</h1>
+        <div className="navbar">
+          <div className="form-footer">
+            <button
+              onClick={() => {
+                setPage((currPage) => currPage - 1);
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "8px",
+                }}
+              >
+                <box-icon
+                  name="chevron-left"
+                  type="solid"
+                  color="#5baab0"
+                ></box-icon>
+                Prev
+              </div>
+            </button>
+            <button
+              onClick={() => {
+                setPage(0);
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "8px",
+                }}
+              >
+                Home
+                <box-icon name="home" type="solid" color="#5baab0"></box-icon>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="recc">
         <ul>
           {Object.entries(resultMovies).map((resMov) => (
@@ -42,23 +86,7 @@ function Result({ movieRating, groupSize, page, setPage, movieName }) {
           ))}
         </ul>
       </div>
-      <div className="form-footer">
-        <button
-          onClick={() => {
-            setPage((currPage) => currPage - 1);
-          }}
-        >
-          Prev
-        </button>
-        <button
-          onClick={() => {
-            setPage(0);
-          }}
-        >
-          Home
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
 

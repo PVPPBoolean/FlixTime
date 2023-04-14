@@ -53,7 +53,14 @@ function Card({ movieName }) {
               target={"_blank"}
               rel="noreferrer"
             >
-              <img src={movieDetail.Poster} alt="movie poster" />
+              <img
+                src={movieDetail.Poster}
+                alt="movie poster"
+                onError={(e) => {
+                  e.target.src =
+                    "https://cdn.discordapp.com/attachments/999382322539405413/1096429016199741461/http-404-user-interface-design-design-removebg-preview_1.png";
+                }}
+              />
             </a>
           </div>
           <div className="card__details">
