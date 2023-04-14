@@ -24,7 +24,7 @@ function Card({ movieName }) {
 
     const URL = "http://www.omdbapi.com/";
     const querystring = {
-      apikey: "9d11efb1",
+      apikey: "ffb5753f",
       t: movietName,
       y: movieYear,
       plot: "full",
@@ -77,7 +77,8 @@ function Card({ movieName }) {
                   gap: "2px",
                 }}
               >
-                <box-icon name="star"></box-icon>
+                <box-icon name="star" type="solid" color="#656565"></box-icon>
+                {/* <box-icon name="calendar-star" color="#585656"></box-icon>{" "} */}
                 <h5>{movieDetail.imdbRating}/10</h5>
               </div>
               <div
@@ -88,7 +89,11 @@ function Card({ movieName }) {
                   gap: "2px",
                 }}
               >
-                <box-icon name="time-five"></box-icon>
+                <box-icon
+                  name="time-five"
+                  type="solid"
+                  color="#656565"
+                ></box-icon>
                 <h5>{movieDetail.Runtime}</h5>
               </div>
             </div>

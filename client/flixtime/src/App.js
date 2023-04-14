@@ -16,7 +16,7 @@ function App() {
         let movieTitles = Object.keys(topMoviesData.data);
         const movieTitleList = Object.values(movieTitles);
         setMovieTitles(movieTitleList);
-        // console.log(movieTitleList)
+        console.log(movieTitleList)
       })
       .catch((err) => {
         console.log(err);
