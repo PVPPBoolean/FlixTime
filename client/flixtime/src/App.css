@@ -550,6 +550,7 @@ li {
   align-items: center;
   flex-direction: row;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .navbar .form-footer Button {
