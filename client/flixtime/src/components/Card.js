@@ -25,6 +25,7 @@ function Card({ movieName }) {
     const URL = "http://www.omdbapi.com/";
     const querystring = {
       apikey: "ffb5753f",
+      // apikey: "9d11efb1",
       t: movietName,
       y: movieYear,
       plot: "full",

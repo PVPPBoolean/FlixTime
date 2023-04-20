@@ -8,7 +8,7 @@ function App() {
   const [movieTitles, setMovieTitles] = useState([]);
 
   useEffect(() => {
-    const URL = "http://127.0.0.1:5000/tmovi";
+    const URL = "https://manishjalui11.pythonanywhere.com/tmovi";
     axios
       .get(URL)
       .then((res) => {
@@ -16,7 +16,7 @@ function App() {
         let movieTitles = Object.keys(topMoviesData.data);
         const movieTitleList = Object.values(movieTitles);
         setMovieTitles(movieTitleList);
-        console.log(movieTitleList)
+        console.log(movieTitleList);
       })
       .catch((err) => {
         console.log(err);

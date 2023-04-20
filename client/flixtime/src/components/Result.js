@@ -11,7 +11,7 @@ function Result({ movieRating, groupSize, page, setPage, movieName }) {
     axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
     axios
       .get(
-        `http://127.0.0.1:5000/result?movieRating=${movieRating}&groupSize=${groupSize}&page=${page}&movieName=${movieName}`
+        `https://manishjalui11.pythonanywhere.com/result?movieRating=${movieRating}&groupSize=${groupSize}&page=${page}&movieName=${movieName}`
       )
       .then((res) => {
         setResultMovies(res.data.recs);
