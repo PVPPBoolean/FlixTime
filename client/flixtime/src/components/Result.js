@@ -18,7 +18,8 @@ function Result({ movieRating, groupSize, page, setPage, movieName }) {
         console.log(res.data.recs);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.message);
+        setResultMovies(err.message);
       })
       .finally(() => {
         console.log("Request completed");
@@ -74,17 +75,44 @@ function Result({ movieRating, groupSize, page, setPage, movieName }) {
         </div>
       </div>
       <div className="recc">
-        <ul>
-          {Object.entries(resultMovies).map((resMov) => (
-            <li>
-              <ul key={resMov}>
-                {resMov.map((item, index) => (
-                  <Card movieName={item} key={index} />
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
+        {resultMovies == "Request failed with status code 500" ? (
+          <>
+            {/* <h1>No movies found</h1> */}
+            <div class="flex-container">
+              <div class="text-center">
+                <h1>
+                  <span class="fade-in" id="digit1">
+                    4
+                  </span>
+                  <span class="fade-in" id="digit2">
+                    0
+                  </span>
+                  <span class="fade-in" id="digit3">
+                    4
+                  </span>
+                </h1>
+                <h3 class="fadeIn">NO MOVIES FOUND</h3>
+                <h6>Please rate the movies properly.</h6>
+                <h6>OR</h6>
+                <h6>Try refreshing the webpage.</h6>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <ul>
+              {Object.entries(resultMovies).map((resMov) => (
+                <li>
+                  <ul key={resMov}>
+                    {resMov.map((item, index) => (
+                      <Card movieName={item} key={index} />
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </div>
     </>
   );

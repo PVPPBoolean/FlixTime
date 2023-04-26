@@ -44,7 +44,7 @@ function Card({ movieName }) {
 
   const CardForm = () => {
     if (movieDetail.Response == "False") {
-      return <div>{/* <h1>Movie not found</h1> */}</div>;
+      return <></>;
     } else {
       return (
         <div className="card__cointainer">
@@ -59,7 +59,7 @@ function Card({ movieName }) {
                 alt="movie poster"
                 onError={(e) => {
                   e.target.src =
-                    "https://cdn.discordapp.com/attachments/999382322539405413/1096429016199741461/http-404-user-interface-design-design-removebg-preview_1.png";
+                    "https://cdn.discordapp.com/attachments/999382322539405413/1100667433813020764/default_poster_1.jpg";
                 }}
               />
             </a>
