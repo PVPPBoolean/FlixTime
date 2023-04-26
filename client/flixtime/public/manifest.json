@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "FlixTime",
+  "name": "FlixTime - Group Movie Recommender",
   "icons": [
     {
       "src": "favicon.ico",
